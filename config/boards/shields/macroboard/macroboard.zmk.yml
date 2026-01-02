@@ -1,0 +1,8 @@
+file_format: "1"
+id: macroboard
+name: MacroBoard 7x5
+type: shield
+url: https://github.com/yourusername/my-macro-keyboard
+requires: [pro_micro]
+features:
+  - keys
