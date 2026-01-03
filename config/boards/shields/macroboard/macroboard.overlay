@@ -1,5 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -23,14 +22,14 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
-        diode-direction = "row2col";
+        diode-direction = "col2row";
 
         row-gpios
-            = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
+            = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
